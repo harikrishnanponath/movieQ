@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="50dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.SearchFragment">
 
@@ -21,6 +22,8 @@
             android:id="@+id/editTextSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            android:singleLine="true"
             android:textColor="@color/selector_hint_color"
             />
 
