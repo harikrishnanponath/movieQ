@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_grey">#90A4AE</color>
+    <color name="grey">#607D8B</color>
+    <color name="wenge">#443850</color>
+    <color name="purple">#5C6BC0</color>
+    <color name="deep_purple">#151D21</color>
+    <color name="primary">#254857</color>
+    <color name="rating_selector">#E65100</color>
+
 </resources>

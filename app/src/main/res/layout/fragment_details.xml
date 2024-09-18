@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_selector"
+    tools:context=".ui.fragments.DetailsFragment">
+
+    <ImageView
+        android:id="@+id/details_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        tools:text="Reacher"
+        app:layout_constraintTop_toBottomOf="@id/details_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp" />
+
+
+    <TextView
+        android:id="@+id/details_release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        style="@style/CustomTextViewStyle"
+        android:textColor="@android:color/darker_gray"
+        tools:text="Release Date: 2012-12-20"
+        app:layout_constraintTop_toBottomOf="@id/details_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp" />
+
+
+    <!-- RatingBar and Total Ratings -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rating_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/details_release_date"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp">
+
+        <RatingBar
+            android:id="@+id/details_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:progressTint="@color/rating_selector"
+            android:progressBackgroundTint="@color/rating_selector"
+            android:numStars="5"
+            android:rating="4"
+            android:stepSize="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/details_total_ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingStart="6dp"
+            android:textColor="@android:color/darker_gray"
+            tools:text="Total Ratings: 6907"
+            app:layout_constraintStart_toEndOf="@id/details_rating_bar"
+            app:layout_constraintTop_toTopOf="@id/details_rating_bar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/details_overview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:lineSpacingExtra="4dp"
+        tools:text="One morning in an ordinary town, five people are shot dead in a seemingly random attack. All evidence points to a single suspect..."
+        app:layout_constraintTop_toBottomOf="@id/rating_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

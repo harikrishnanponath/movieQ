@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movies_nav_graph"
+    app:startDestination="@id/discoverFragment">
+
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.harikrish.movieq.ui.fragments.DiscoverFragment"
+        android:label="fragment_discover"
+        tools:layout="@layout/fragment_discover" >
+        <action
+            android:id="@+id/action_discoverFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.harikrish.movieq.ui.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingFragment"
+        android:name="com.harikrish.movieq.ui.fragments.UpcomingFragment"
+        android:label="fragment_upcoming"
+        tools:layout="@layout/fragment_upcoming" >
+        <action
+            android:id="@+id/action_upcomingFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.harikrish.movieq.ui.fragments.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="movie"
+            app:argType="com.harikrish.movieq.model.Result" />
+
+    </fragment>
+
+</navigation>

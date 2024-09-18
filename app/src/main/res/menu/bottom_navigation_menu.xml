@@ -3,19 +3,19 @@
 
     <item
         android:id="@+id/discoverFragment"
-        android:title="Discover"
         android:icon="@drawable/home_icon"
-        />
+        android:tint="@color/white"
+        android:title="" />
 
     <item
         android:id="@+id/upcomingFragment"
-        android:title="Upcoming"
         android:icon="@drawable/upcoming_icon"
-        />
+        android:tint="@color/white"
+        android:title="" />
 
     <item
         android:id="@+id/searchFragment"
-        android:title="Search"
         android:icon="@drawable/search_icon"
-        />
+        android:tint="@color/white"
+        android:title="" />
 </menu>
